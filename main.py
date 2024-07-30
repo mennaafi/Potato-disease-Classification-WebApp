@@ -1,5 +1,5 @@
 import streamlit as st
-from tensorflow.keras.models import load_model  # استخدام tf.keras
+from tensorflow.keras.models import load_model  
 from PIL import Image
 import numpy as np
 
@@ -17,12 +17,13 @@ st.header('Please upload an image')
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
 # load classifier
-model_path = 'model1/model_v1.keras'
-#model = load_model(model_path) 
+model_path = 'model1/model_v1.h5'
+
 try:
-    model = load_model(model_path)
+    model = load_model('model1/model_v1.h5')
 except Exception as e:
-    st.error(f"Error loading model: {e}")
+    print(f"Error loading model: {e}")
+
 
 
 # load class names  
