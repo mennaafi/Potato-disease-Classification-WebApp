@@ -5,7 +5,9 @@ import numpy as np
 
 from util import classify, set_background
 
-set_background(r'C:\proj\potato-disease\templates\bg.png')
+set_background('templates/bg.png')  
+
+
 
 
 # set title
@@ -18,7 +20,7 @@ st.header('Please upload an image')
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
 # load classifier
-model_path = r'C:\proj\potato-disease\model1\model_v1.keras'
+model_path = 'model1/model_v1.keras'
 model = load_model(model_path) 
 
 # load class names  
@@ -36,8 +38,11 @@ if file is not None:
     image = Image.open(file).convert('RGB')
     st.image(image, use_column_width=False, width=300)
 
+
     # classify image
     class_name = classify(image, model, class_names)
 
     # write classification
     st.write("## {}".format(class_name))
+
+
