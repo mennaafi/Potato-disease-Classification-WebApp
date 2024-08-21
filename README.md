@@ -27,17 +27,6 @@ After training the CNN model, I integrated it into a web application that allows
      - 2 Potato___healthy
 
 
-
-### Training & Deployment
-- Training Advanced CNN Architecture.
-- Data Preparation:
-  - Efficient preprocessing techniques, including standardization and normalization
-  - Advanced data augmentation methods to enhance dataset diversity
-- Deployment:
-  - Seamless implementation using Streamlit for interactive demos
-  - User-friendly and accessible showcase of the model's capabilities
-
-
 ## Screenshot from WebApp :  [here](https://github.com/mennaafi/Potato-disease-Classification-WebApp/tree/master/screenshotfromapp)
 
 ## Requirements :
